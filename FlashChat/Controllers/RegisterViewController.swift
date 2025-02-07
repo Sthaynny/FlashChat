@@ -8,22 +8,30 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    //MARK: Atributs
+    var coordinator: Coordinator?
+    
+    //MARK: Components View
 
+    //MARK: Load View
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addSubViews()
+        setupConstraints()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: SETUP PAGE
+    
+    func addSubViews(){
+        
     }
-    */
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+        ])
+    }
 
 }
