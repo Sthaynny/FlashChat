@@ -23,14 +23,25 @@ class WelcomeViewController: UIViewController {
     }()
     
     private lazy var registerButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
+        button.setTitle("Resgistar-se", for: .normal)
+        button.setTitleColor(.brandBlue, for: .normal)
+        button.layer.cornerRadius = 12
+        button.backgroundColor = .brandBlue.withAlphaComponent(0.2)
+        button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
     }()
     
     private lazy var loginButton: UIButton = {
         let button = UIButton()
-        
+        button.setTitle("Log in", for: .normal)
+        button.layer.cornerRadius = 12
+        button.backgroundColor = .brandBlue
+        button.tintColor = .white
+        button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     //MARK: Load View
@@ -47,13 +58,23 @@ class WelcomeViewController: UIViewController {
     
     func addSubViews(){
         view.addSubview(initLabel)
-        
+        view.addSubview(registerButton)
+        view.addSubview(loginButton)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
             initLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             initLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
+            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            loginButton.heightAnchor.constraint(equalToConstant: 54),
+            registerButton.bottomAnchor.constraint(equalTo: loginButton.topAnchor, constant: -8),
+            registerButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            registerButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            registerButton.heightAnchor.constraint(equalToConstant: 54),
+            
         ])
     }
 

@@ -13,7 +13,6 @@ class ChatViewController: UIViewController {
     //MARK: Components View
     
     //MARK: Load View
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
@@ -22,7 +21,6 @@ class ChatViewController: UIViewController {
     }
     
     //MARK: SETUP PAGE
-    
     func addSubViews(){
         
     }
