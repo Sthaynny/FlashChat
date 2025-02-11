@@ -16,7 +16,6 @@ class WelcomeViewController: UIViewController {
     private lazy var initLabel: UILabel = {
         let label = UILabel( )
         label.font = .systemFont(ofSize: 50, weight: .bold)
-        label.text = "⚡️FlashChat"
         label.textColor = .brandBlue
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -51,6 +50,7 @@ class WelcomeViewController: UIViewController {
         view.backgroundColor = .brandLightPurple
         addSubViews()
         setupConstraints()
+        setupAnimation()
         // Do any additional setup after loading the view.
     }
     
@@ -76,6 +76,18 @@ class WelcomeViewController: UIViewController {
             registerButton.heightAnchor.constraint(equalToConstant: 54),
             
         ])
+    }
+    
+    func setupAnimation( ){
+        initLabel.text = ""
+        let title = "⚡️FlashChat"
+        var charIndex = 0
+        for char in title{
+            Timer.scheduledTimer(withTimeInterval: 0.1 * Double(charIndex), repeats: false) { timer in
+                self.initLabel.text?.append(char)
+            }
+            charIndex += 1
+        }
     }
 
 }
