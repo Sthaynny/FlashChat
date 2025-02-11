@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A68CF0C556BB9F411AF34EBE /* Pods_FlashChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2303E85D5266896412E9D /* Pods_FlashChatTests.framework */; };
+		CE2FE75E2EE0B5A8EB0F48F9 /* Pods_FlashChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8074CBE85F91FCE26BEB18 /* Pods_FlashChat.framework */; };
+		D1F5C8FDCEB499741963C44E /* Pods_FlashChat_FlashChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45159CA109ADFE95BAB1A3E /* Pods_FlashChat_FlashChatUITests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C200CF2C2D564A5000B0EB50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D0D13127F603311027F36D7 /* Pods-FlashChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.release.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.release.xcconfig"; sourceTree = "<group>"; };
+		2830ABC639919DBAE201C697 /* Pods-FlashChat-FlashChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat-FlashChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-FlashChat-FlashChatUITests/Pods-FlashChat-FlashChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E8074CBE85F91FCE26BEB18 /* Pods_FlashChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		709CACA157762B4600CFE15A /* Pods-FlashChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat.debug.xcconfig"; path = "Target Support Files/Pods-FlashChat/Pods-FlashChat.debug.xcconfig"; sourceTree = "<group>"; };
+		847DF8F7E596B9C16D2FFC28 /* Pods-FlashChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChatTests.release.xcconfig"; path = "Target Support Files/Pods-FlashChatTests/Pods-FlashChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		A45159CA109ADFE95BAB1A3E /* Pods_FlashChat_FlashChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashChat_FlashChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F3B6D6F70310AD9E3F18E8 /* Pods-FlashChat-FlashChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChat-FlashChatUITests.release.xcconfig"; path = "Target Support Files/Pods-FlashChat-FlashChatUITests/Pods-FlashChat-FlashChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C200CF152D564A4C00B0EB50 /* FlashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C200CF2B2D564A5000B0EB50 /* FlashChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C200CF352D564A5000B0EB50 /* FlashChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E1FD13138FFDA9CC99B912 /* Pods-FlashChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashChatTests.debug.xcconfig"; path = "Target Support Files/Pods-FlashChatTests/Pods-FlashChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0A2303E85D5266896412E9D /* Pods_FlashChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,11 +65,15 @@
 		};
 		C200CF2E2D564A5000B0EB50 /* FlashChatTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = FlashChatTests;
 			sourceTree = "<group>";
 		};
 		C200CF382D564A5000B0EB50 /* FlashChatUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = FlashChatUITests;
 			sourceTree = "<group>";
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2FE75E2EE0B5A8EB0F48F9 /* Pods_FlashChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68CF0C556BB9F411AF34EBE /* Pods_FlashChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +100,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F5C8FDCEB499741963C44E /* Pods_FlashChat_FlashChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78993930FC3DAB1ED0DE6BE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E8074CBE85F91FCE26BEB18 /* Pods_FlashChat.framework */,
+				A45159CA109ADFE95BAB1A3E /* Pods_FlashChat_FlashChatUITests.framework */,
+				F0A2303E85D5266896412E9D /* Pods_FlashChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7373EBA2C6F50E681571E6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				709CACA157762B4600CFE15A /* Pods-FlashChat.debug.xcconfig */,
+				0D0D13127F603311027F36D7 /* Pods-FlashChat.release.xcconfig */,
+				2830ABC639919DBAE201C697 /* Pods-FlashChat-FlashChatUITests.debug.xcconfig */,
+				B5F3B6D6F70310AD9E3F18E8 /* Pods-FlashChat-FlashChatUITests.release.xcconfig */,
+				C8E1FD13138FFDA9CC99B912 /* Pods-FlashChatTests.debug.xcconfig */,
+				847DF8F7E596B9C16D2FFC28 /* Pods-FlashChatTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C200CF0C2D564A4C00B0EB50 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +138,8 @@
 				C200CF2E2D564A5000B0EB50 /* FlashChatTests */,
 				C200CF382D564A5000B0EB50 /* FlashChatUITests */,
 				C200CF162D564A4C00B0EB50 /* Products */,
+				B7373EBA2C6F50E681571E6B /* Pods */,
+				78993930FC3DAB1ED0DE6BE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +160,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C200CF3E2D564A5000B0EB50 /* Build configuration list for PBXNativeTarget "FlashChat" */;
 			buildPhases = (
+				AE9177E43E448118FC110AC5 /* [CP] Check Pods Manifest.lock */,
 				C200CF112D564A4C00B0EB50 /* Sources */,
 				C200CF122D564A4C00B0EB50 /* Frameworks */,
 				C200CF132D564A4C00B0EB50 /* Resources */,
@@ -124,8 +173,6 @@
 				C200CF172D564A4C00B0EB50 /* FlashChat */,
 			);
 			name = FlashChat;
-			packageProductDependencies = (
-			);
 			productName = FlashChat;
 			productReference = C200CF152D564A4C00B0EB50 /* FlashChat.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C200CF432D564A5000B0EB50 /* Build configuration list for PBXNativeTarget "FlashChatTests" */;
 			buildPhases = (
+				80C9859E4C121BB4B841FD81 /* [CP] Check Pods Manifest.lock */,
 				C200CF272D564A5000B0EB50 /* Sources */,
 				C200CF282D564A5000B0EB50 /* Frameworks */,
 				C200CF292D564A5000B0EB50 /* Resources */,
@@ -147,8 +195,6 @@
 				C200CF2E2D564A5000B0EB50 /* FlashChatTests */,
 			);
 			name = FlashChatTests;
-			packageProductDependencies = (
-			);
 			productName = FlashChatTests;
 			productReference = C200CF2B2D564A5000B0EB50 /* FlashChatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C200CF462D564A5000B0EB50 /* Build configuration list for PBXNativeTarget "FlashChatUITests" */;
 			buildPhases = (
+				4A92B7A237EFAF34FAEFE429 /* [CP] Check Pods Manifest.lock */,
 				C200CF312D564A5000B0EB50 /* Sources */,
 				C200CF322D564A5000B0EB50 /* Frameworks */,
 				C200CF332D564A5000B0EB50 /* Resources */,
@@ -170,8 +217,6 @@
 				C200CF382D564A5000B0EB50 /* FlashChatUITests */,
 			);
 			name = FlashChatUITests;
-			packageProductDependencies = (
-			);
 			productName = FlashChatUITests;
 			productReference = C200CF352D564A5000B0EB50 /* FlashChatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +289,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A92B7A237EFAF34FAEFE429 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashChat-FlashChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80C9859E4C121BB4B841FD81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9177E43E448118FC110AC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C200CF112D564A4C00B0EB50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,6 +398,7 @@
 /* Begin XCBuildConfiguration section */
 		C200CF3F2D564A5000B0EB50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709CACA157762B4600CFE15A /* Pods-FlashChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +425,7 @@
 		};
 		C200CF402D564A5000B0EB50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D0D13127F603311027F36D7 /* Pods-FlashChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +571,7 @@
 		};
 		C200CF442D564A5000B0EB50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E1FD13138FFDA9CC99B912 /* Pods-FlashChatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +590,7 @@
 		};
 		C200CF452D564A5000B0EB50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847DF8F7E596B9C16D2FFC28 /* Pods-FlashChatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +609,7 @@
 		};
 		C200CF472D564A5000B0EB50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2830ABC639919DBAE201C697 /* Pods-FlashChat-FlashChatUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -507,6 +626,7 @@
 		};
 		C200CF482D564A5000B0EB50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F3B6D6F70310AD9E3F18E8 /* Pods-FlashChat-FlashChatUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
