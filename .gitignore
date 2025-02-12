@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
 
+# credentials
+*.plist
+
 ### Android ###
 # Built application files
 *.apk
