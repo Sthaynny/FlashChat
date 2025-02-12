@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/dart,swift,xcode,android,intellij,cocoapods,objective-c,androidstudio
 
 # credentials
-GoogleService-Info.plist
+FlashChat/GoogleService-Info.plist
 
 ### Android ###
 # Built application files

@@ -24,5 +24,22 @@ class MainCoordinator: Coordinator{
         navigationController.pushViewController(welcomeView, animated:true)
     }
     
+    func goToRegistration(){
+        let view = RegisterViewController()
+        view.coordinator = self
+        navigationController.pushViewController(view, animated:true)
+    }
+    
+    func goToLoginApp(){
+        let view = LoginViewController()
+        view.coordinator = self
+        navigationController.pushViewController(view, animated:true)
+    }
+    
+    func goToHomeAplication(){
+        let view = ChatViewController()
+        view.coordinator = self
+        navigationController.pushViewController(view, animated:true)
+    }
     
 }
