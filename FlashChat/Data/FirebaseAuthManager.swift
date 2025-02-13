@@ -23,6 +23,7 @@ struct FirebaseAuthManager{
             }
             guard let user = result?.user else{
                 print("Aconteceu um erro")
+                delegate?.registerAccountError("Aconteceu um erro")
                 return
             }
             delegate?.registerAccountSuccess(user)

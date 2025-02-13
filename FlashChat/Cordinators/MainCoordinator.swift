@@ -19,7 +19,7 @@ class MainCoordinator: Coordinator{
     }
     
     func start() {
-        let welcomeView = WelcomeViewController()
+        let welcomeView = RegisterViewController()
         welcomeView.coordinator = self
         navigationController.pushViewController(welcomeView, animated:true)
     }
