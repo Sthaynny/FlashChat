@@ -12,6 +12,7 @@ import FirebaseAuth
 class RegisterViewModel{
     private var firebase: FirebaseAuthManager
     @Published var userApp: User?
+    @Published var errorMessage: String?
     
     
     init(firebase: FirebaseAuthManager) {
@@ -29,13 +30,11 @@ extension RegisterViewModel: FirebaseAuthDelegate{
     func registerAccountSuccess(_ user: FirebaseAuth.User) {
         DispatchQueue.main.async { [self] in
             userApp = user
-            print(userApp?.uid)
-            print(user.uid)
         }
     }
     
     func registerAccountError(_ message: String) {
-        
+        errorMessage = message
     }
     
     

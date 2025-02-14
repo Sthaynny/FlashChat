@@ -42,14 +42,17 @@ class RegisterViewController: UIViewController {
                 self?.coordinator?.goToHomeAplication()
             }.store(in: &cancellables)
         
-//        viewModel.$errorMessage
-//            .receive(on: RunLoop.main)
-//            .sink { [weak self] errorMessage in
-//                if let errorMessage = errorMessage {
-//                    self?.showErrorAlert(message: errorMessage)
-//                }
-//            }
-//            .store(in: &cancellables)
+        viewModel.$errorMessage
+            .receive(on: RunLoop.main)
+            .sink { [weak self] errorMessage in
+                if let errorMessage = errorMessage {
+                    let alert = UIAlertController(title: "Ops! Aconteceu um erro!", message: errorMessage, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self?.present(alert, animated: true)
+                    
+                }
+            }
+            .store(in: &cancellables)
     }
     
     //MARK: SETUP PAGE
