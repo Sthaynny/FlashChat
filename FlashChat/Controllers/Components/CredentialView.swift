@@ -19,6 +19,7 @@ class CredentialView: UIView {
         super.init(frame: frame)
         addSubViews()
         setupConstraints()
+        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -53,13 +54,15 @@ class CredentialView: UIView {
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.font = .systemFont(ofSize: 25)
-        textField.textColor = .black
+        textField.textColor = .brandBlue
         textField.isUserInteractionEnabled = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.gray.withAlphaComponent(0.6), // Cor do placeholder
             .font: UIFont.italicSystemFont(ofSize: 16) // Opcional: Cursor personalizada
         ]
+        textField.keyboardType = .emailAddress
+        textField.autocorrectionType = .no
         textField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: attributes)
         
         return textField
@@ -68,7 +71,7 @@ class CredentialView: UIView {
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.font = .systemFont(ofSize: 25)
-        textField.textColor = .black
+        textField.textColor = .brandBlue
         textField.isUserInteractionEnabled = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.isSecureTextEntry = true
@@ -93,8 +96,8 @@ class CredentialView: UIView {
     }()
     
     @objc private func actionButton(){
-        print(emailTextField.text)
-        delegate?.didActionButtonCredential(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        delegate?.didActionButtonCredential(email: email, password: password)
     }
     
     func addSubViews(){
@@ -103,6 +106,10 @@ class CredentialView: UIView {
         addSubview(backgroundPassword)
         addSubview(passwordTextField)
         addSubview(buttonActionCredential)
+    }
+    
+    func setupView(){
+        emailTextField.delegate = self
     }
     
     func setupConstraints() {
@@ -135,4 +142,16 @@ class CredentialView: UIView {
         ])
     }
 
+}
+
+
+extension CredentialView: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text as NSString?{
+            let newText = text.replacingCharacters(in: range, with: string).lowercased()
+            textField.text = newText.replacingOccurrences(of: " ", with: "")
+            return false
+        }
+        return true
+    }
 }

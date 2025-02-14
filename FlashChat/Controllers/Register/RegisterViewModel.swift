@@ -9,18 +9,29 @@ import Foundation
 import FirebaseAuth
 
 
-struct RegisterViewModel{
+class RegisterViewModel{
     private var firebase: FirebaseAuthManager
+    @Published var userApp: User?
+    
     
     init(firebase: FirebaseAuthManager) {
         self.firebase = firebase
         self.firebase.delegate = self
     }
+    
+    func registerUser(email: String , password: String){
+        firebase.registerAccontUser(email: email, password: password)
+    }
+    
 }
 
 extension RegisterViewModel: FirebaseAuthDelegate{
     func registerAccountSuccess(_ user: FirebaseAuth.User) {
-        
+        DispatchQueue.main.async { [self] in
+            userApp = user
+            print(userApp?.uid)
+            print(user.uid)
+        }
     }
     
     func registerAccountError(_ message: String) {

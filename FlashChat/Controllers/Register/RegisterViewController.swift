@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 class RegisterViewController: UIViewController {
     
     //MARK: Atributs
-    var coordinator: Coordinator?
+    
+    var viewModel = RegisterViewModel(firebase: FirebaseAuthManager())
+    var coordinator: MainCoordinator?
+    private var cancellables = Set<AnyCancellable>()
     
     //MARK: Components View
     
@@ -27,6 +31,25 @@ class RegisterViewController: UIViewController {
         addSubViews()
         setupConstraints()
         // Do any additional setup after loading the view.
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        viewModel.$userApp
+            .receive(on: RunLoop.main)
+            .sink { [weak self] user in
+                guard  user != nil else { return }
+                self?.coordinator?.goToHomeAplication()
+            }.store(in: &cancellables)
+        
+//        viewModel.$errorMessage
+//            .receive(on: RunLoop.main)
+//            .sink { [weak self] errorMessage in
+//                if let errorMessage = errorMessage {
+//                    self?.showErrorAlert(message: errorMessage)
+//                }
+//            }
+//            .store(in: &cancellables)
     }
     
     //MARK: SETUP PAGE
@@ -48,7 +71,7 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController: CredentialDelegate{
     func didActionButtonCredential(email: String, password: String) {
-        
+        viewModel.registerUser(email: email, password: password)
     }
     
 }

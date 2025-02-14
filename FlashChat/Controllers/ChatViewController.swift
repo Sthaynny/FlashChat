@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
     //MARK: Load View
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
         addSubViews()
         setupConstraints()
         // Do any additional setup after loading the view.
