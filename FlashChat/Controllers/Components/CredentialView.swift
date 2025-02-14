@@ -9,6 +9,7 @@ import UIKit
 
 protocol CredentialDelegate {
     func didActionButtonCredential(email : String, password: String)
+    func didEmailInvalid()
 }
 
 class CredentialView: UIView {
@@ -153,5 +154,13 @@ extension CredentialView: UITextFieldDelegate{
             return false
         }
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if let text = textField.text, AccountValidation.isValidEmail(text) {
+            textField.layer.borderWidth = 0
+        } else {
+            delegate?.didEmailInvalid()
+        }
     }
 }

@@ -73,6 +73,12 @@ class RegisterViewController: UIViewController {
 }
 
 extension RegisterViewController: CredentialDelegate{
+    func didEmailInvalid() {
+        let alert = UIAlertController(title: "Email invalido", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default))
+        present(alert, animated: true)
+    }
+    
     func didActionButtonCredential(email: String, password: String) {
         viewModel.registerUser(email: email, password: password)
     }
